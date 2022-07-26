@@ -86,8 +86,8 @@ if __name__ == '__main__':
     
     try:
         dxl_io = dynamixel_io.DynamixelIO(port, baudrate)
-    except dynamixel_io.SerialOpenError, soe:
-        print 'ERROR:', soe
+    except dynamixel_io.SerialOpenError as soe:
+        print('ERROR:', soe)
     else:
         for motor_id in motor_ids:
             motor_id = int(motor_id)
